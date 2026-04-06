@@ -1,0 +1,936 @@
+[
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "缸体",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "缸盖",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体",
+    "predicate": "出现故障",
+    "object": "缸体、缸盖变形",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸盖",
+    "predicate": "出现故障",
+    "object": "缸体、缸盖变形",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体",
+    "predicate": "出现故障",
+    "object": "气缸体与气缸盖的裂纹",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸盖",
+    "predicate": "出现故障",
+    "object": "气缸体与气缸盖的裂纹",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体、缸盖变形",
+    "predicate": "表现为",
+    "object": "发动机排白烟",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体、缸盖变形",
+    "predicate": "表现为",
+    "object": "怠速运转时水箱冒气泡",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体、缸盖变形",
+    "predicate": "表现为",
+    "object": "缸压低",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体、缸盖变形",
+    "predicate": "原因是",
+    "object": "缸体在铸造和机械加工时有残余应力",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体、缸盖变形",
+    "predicate": "原因是",
+    "object": "曲柄连杆机构往复运动产生的力作用在气缸体上",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体、缸盖变形",
+    "predicate": "原因是",
+    "object": "不按规定顺序拧紧气缸盖螺栓",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体、缸盖变形",
+    "predicate": "原因是",
+    "object": "高温下拆卸气缸盖",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸体、缸盖变形",
+    "predicate": "原因是",
+    "object": "发动机长期在高转速、大负荷条件下工作",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": ": 是系统的一部分",
+    "object": "汽车发动机",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": "表现为",
+    "object": "发动机排白烟",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": "表现为",
+    "object": "怠速运转时水箱冒气泡",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": "表现为",
+    "object": "缸压低",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": "原因是",
+    "object": "水垢集聚过多而散热不良",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": "原因是",
+    "object": "缸体结冰冻裂",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": "原因是",
+    "object": "冷热急剧变化",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": "原因是",
+    "object": "碰撞受振",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体与气缸盖的裂纹",
+    "predicate": ": 是系统的一部分",
+    "object": "汽车发动机",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气门座",
+    "predicate": ": 是系统的一部分",
+    "object": "汽车发动机",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "水套",
+    "predicate": ": 是系统的一部分",
+    "object": "汽车发动机",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气门座",
+    "predicate": ": 是系统的一部分",
+    "object": "汽缸盖",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "水套",
+    "predicate": ": 是系统的一部分",
+    "object": "汽缸体",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气门座",
+    "predicate": ": 是系统的一部分",
+    "object": "汽缸套",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽缸套",
+    "predicate": ": 是系统的一部分",
+    "object": "汽缸体",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽缸套",
+    "predicate": ": 是系统的一部分",
+    "object": "汽缸盖",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽缸套",
+    "predicate": ": 是系统的一部分",
+    "object": "汽门座",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体",
+    "predicate": "包含部件",
+    "object": "缸盖",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸体",
+    "predicate": "出现故障",
+    "object": "检测",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "缸盖",
+    "predicate": "出现故障",
+    "object": "检测",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "检测",
+    "predicate": "诊断方法",
+    "object": "对气缸体及缸盖进行检测",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "气缸垫",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫",
+    "predicate": "出现故障",
+    "object": "气缸垫烧蚀",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "表现为",
+    "object": "发动机运转不平稳，排气管有‘突、突’的响声",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "表现为",
+    "object": "发动机工作性能变坏，动力下降，转速不能提高",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "表现为",
+    "object": "相邻两缸窜气，气缸压力低，有时进气管回火，排气管放炮",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "表现为",
+    "object": "气缸垫水道处窜气，致使发动机散热器内有气泡",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "表现为",
+    "object": "冷却液漏入气缸内，排白烟，发动机难以启动",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "表现为",
+    "object": "冷却液漏人曲轴箱，使润滑油油面升高，且变质",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "表现为",
+    "object": "发动机温度高，有时在发动机外部气缸垫边缘有漏水之处",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "原因是",
+    "object": "气缸盖螺栓拧紧力不均匀，或拧紧力不够",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "原因是",
+    "object": "气缸体和气缸盖接合面变形",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "原因是",
+    "object": "发动机经常在大负荷、点火过早、发动机过热、爆震等情况下运行",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "原因是",
+    "object": "气缸垫本身质量问题",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "气缸垫烧蚀",
+    "predicate": "诊断方法",
+    "object": "及时拆检更换气缸垫，必要时研磨气缸盖平面",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "起动机",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "蓄电池桩头",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "喷油器",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "转速传感器",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "水温传感器",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "火花塞",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "高压线",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "分电器盖",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "点火线圈",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "进气管",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "气门",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "气缸",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "燃油系统",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "表现为",
+    "object": "冷车起动困难",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": ":原因是",
+    "object": "蓄电池电量严重不足",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "起动机损坏",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "起动机电路存在故障",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "进气管漏气",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "活塞与气缸之间封闭不良",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "气门关闭不严导致气缸压力低",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "进气门背部及进气管内积炭过多",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "发动机管理系统故障",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "转速传感器信号弱",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "水温信号不正确",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": "原因是",
+    "object": "线路接触不良",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "冷车不易起动",
+    "predicate": ":原因是",
+    "object": ""
+  },
+  {
+    "subject": "发动机",
+    "predicate": "包含部件",
+    "object": "真空管",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机",
+    "predicate": "包含部件",
+    "object": "线束插头",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "真空管",
+    "predicate": "出现故障",
+    "object": "热车不易起动",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "真空管",
+    "predicate": "出现故障",
+    "object": "热车怠速抖动",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "真空管",
+    "predicate": "出现故障",
+    "object": "热车加速不良",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车不易起动",
+    "predicate": "表现为",
+    "object": "发动机排白烟",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车怠速抖动",
+    "predicate": "表现为",
+    "object": "怠速运转时水箱冒气泡",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车加速不良",
+    "predicate": "表现为",
+    "object": "冷车起动困难",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车不易起动",
+    "predicate": "发生条件",
+    "object": "热车状态",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车怠速抖动",
+    "predicate": "发生条件",
+    "object": "热车状态",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车加速不良",
+    "predicate": "发生条件",
+    "object": "热车状态",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车不易起动",
+    "predicate": "诊断方法",
+    "object": "对发动机外观进行检查",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车不易起动",
+    "predicate": "诊断方法",
+    "object": "使用故障诊断仪查询故障码和数据流",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车不易起动",
+    "predicate": "诊断方法",
+    "object": "用万用表、示波器等设备进行测量",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车怠速抖动",
+    "predicate": "诊断方法",
+    "object": "对发动机外观进行检查",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车怠速抖动",
+    "predicate": "诊断方法",
+    "object": "使用故障诊断仪查询故障码和数据流",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车加速不良",
+    "predicate": "诊断方法",
+    "object": "用万用表、示波器等设备进行测量",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "热车加速不良",
+    "predicate": "诊断方法",
+    "object": ""
+  },
+  {
+    "subject": "汽车发动机",
+    "predicate": "包含部件",
+    "object": "启动系统",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动系统",
+    "predicate": "出现故障",
+    "object": "发动机启动系统故障",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机启动系统故障",
+    "predicate": "表现为",
+    "object": "启动机不运转或运转无力",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机启动系统故障",
+    "predicate": "表现为",
+    "object": "启动机运转正常但发动机无法启动",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "蓄电池电量严重不足",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "蓄电池桩头松动或氧化",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "搭铁线接触不良",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "启动机电磁开关损坏",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "电刷磨损过度或卡滞",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "电枢绕组或磁场绕组断路、短路",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "点火开关启动档位触点烧蚀",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "启动继电器故障",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "原因是",
+    "object": "相关连接线路断路或短路",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "诊断方法",
+    "object": "检查蓄电池状态，观察电解液液位及密度（针对可维护电池）",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "诊断方法",
+    "object": "用万用表测量电压，若电压过低，应进行充电或更换",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "诊断方法",
+    "object": "清除蓄电池桩头氧化物并紧固",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "诊断方法",
+    "object": "短接启动机电磁开关的电源端子与启动端子",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机不运转或运转无力",
+    "predicate": "诊断方法",
+    "object": "检查点火开关、启动继电器及其连接线路",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "表现为",
+    "object": "发动机排白烟",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "表现为",
+    "object": "怠速运转时水箱冒气泡",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "表现为",
+    "object": "冷车起动困难",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "燃油箱无油",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "燃油泵不工作",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "燃油滤清器堵塞",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "燃油压力不足",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "火花塞积碳",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "电极烧蚀或间隙不当",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "点火线圈损坏",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "高压线老化漏电",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "空气滤清器严重堵塞",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "进气歧管漏气",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "节气门体卡滞",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "正时皮带或链条断裂、跳齿导致配气相位错乱",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "原因是",
+    "object": "气缸压缩压力过低",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "诊断方法",
+    "object": "聆听点火开关打开时燃油泵是否有短暂的运转声",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "诊断方法",
+    "object": "查看燃油表确认油量",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "启动机运转正常但发动机无法启动",
+    "predicate": "诊断方法",
+    "object": "测量燃油压力",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "进气歧管",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "真空管路",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "怠速控制阀",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "节气门体",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "节气门位置传感器",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "冷却液温度传感器",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "空气流量传感器",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "喷油器",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "火花塞",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "点火线圈",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "高压线",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "发动机怠速系统",
+    "predicate": "包含部件",
+    "object": "发动机支架",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "表现为",
+    "object": "发动机怠速时转速忽高忽低",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "表现为",
+    "object": "车身伴随明显抖动",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "表现为",
+    "object": "有时甚至熄火",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": ": 是原因",
+    "object": "进气歧管存在漏气点",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "真空管路存在漏气点",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "怠速控制阀积碳卡滞或损坏",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "节气门体积碳过多",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "喷油器脏污、堵塞或雾化不良",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "燃油压力不稳定",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "火花塞工作不良（积碳、漏电、间隙不均）",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "点火线圈性能下降",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "高压线阻值异常（针对传统点火系统）",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "气缸压缩压力不均",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  },
+  {
+    "subject": "怠速不稳",
+    "predicate": "原因是",
+    "object": "发动机支架损坏或松动导致共振",
+    "source_doc": "常见汽车发动机故障诊断与排除.docx"
+  }
+]

@@ -1,0 +1,10 @@
+# 忽略环境变量
+.env
+.env.local
+.env.production
+
+# 依赖目录
+node_modules/
+__pycache__/
+venv/
+*.pyc

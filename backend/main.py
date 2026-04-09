@@ -1,26 +1,21 @@
-import os
-import json
 from typing import List, Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
-from dotenv import load_dotenv
-import dashscope
-from http import HTTPStatus
+import json
 
-# 加载环境变量
-load_dotenv()
+from config.settings import settings
+from services.llm_service import llm_service
+from services.neo4j_service import neo4j_service
+from utils.prompt_builder import prompt_builder
 
-# 配置 DashScope API Key
-dashscope.api_key = os.getenv("DASHSCOPE_API_KEY")
-
-app = FastAPI(title="AeroMaint Copilot Backend")
+app = FastAPI(title=settings.PROJECT_NAME)
 
 # CORS 配置
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 生产环境建议指定具体域名，如 ["http://localhost:5173"]
+    allow_origins=settings.ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -37,74 +32,45 @@ class ChatRequest(BaseModel):
     history: Optional[List[Message]] = []
     stream: Optional[bool] = True
 
-def get_qwen_streaming_response(messages):
-    """调用通义千问流式接口"""
-    print(f"Calling DashScope with messages: {json.dumps(messages, ensure_ascii=False)}")
-    try:
-        responses = dashscope.Generation.call(
-            model='qwen-plus',
-            messages=messages,
-            result_format='message',
-            stream=True,
-            incremental_output=True
-        )
-        
-        for response in responses:
-            if response.status_code == HTTPStatus.OK:
-                content = response.output.choices[0]['message']['content']
-                if content:
-                    yield content
-            else:
-                error_msg = f"DashScope Error: {response.code} - {response.message}"
-                print(error_msg)
-                yield f"\n[Error] {error_msg}"
-    except Exception as e:
-        error_msg = f"Unexpected Error: {str(e)}"
-        print(error_msg)
-        yield f"\n[Error] {error_msg}"
-
 @app.post("/chat")
 async def chat(request: ChatRequest):
-    if not dashscope.api_key:
+    if not settings.DASHSCOPE_API_KEY:
         raise HTTPException(status_code=500, detail="DASHSCOPE_API_KEY not configured in .env")
 
-    # 构造 DashScope 要求的 messages 格式
-    formatted_messages = []
+    # 1. 查询知识图谱 (目前返回默认占位符)
+    kg_result = await neo4j_service.query_knowledge(request.message)
     
-    # 添加历史记录
-    if request.history:
-        for msg in request.history:
-            formatted_messages.append({
-                "role": msg.role,
-                "content": msg.content
-            })
+    # 2. 构造提示词消息列表
+    # 将 history 模型列表转为 dict 列表
+    history_dicts = [{"role": msg.role, "content": msg.content} for msg in request.history] if request.history else []
     
-    # 添加当前用户消息
-    formatted_messages.append({
-        "role": "user",
-        "content": request.message
-    })
-
+    formatted_messages = prompt_builder.build_chat_messages(
+        user_message=request.message,
+        history=history_dicts,
+        kg_result=kg_result
+    )
+    # 🔍 [DEBUG] 新增日志：检查 formatted_messages 列表内容
+    print(f"🔍 [DEBUG] formatted_messages before LLM call: {json.dumps(formatted_messages, ensure_ascii=False, indent=2)}")
     if request.stream:
         return StreamingResponse(
-            get_qwen_streaming_response(formatted_messages),
+            llm_service.get_streaming_response(formatted_messages),
             media_type="text/event-stream"
         )
     else:
         # 非流式模式
-        response = dashscope.Generation.call(
-            model='qwen-plus',
-            messages=formatted_messages,
-            result_format='message',
-        )
-        if response.status_code == HTTPStatus.OK:
-            return response.output.choices[0]['message']
+        response = llm_service.get_non_streaming_response(formatted_messages)
+        if "content" in response:
+            return response
         else:
-            raise HTTPException(status_code=response.status_code, detail=response.message)
+            raise HTTPException(status_code=500, detail="Unexpected response from LLM service")
 
 @app.get("/health")
 async def health_check():
-    return {"status": "ok", "api_key_configured": bool(dashscope.api_key)}
+    return {
+        "status": "ok", 
+        "api_key_configured": bool(settings.DASHSCOPE_API_KEY),
+        "project_name": settings.PROJECT_NAME
+    }
 
 if __name__ == "__main__":
     import uvicorn

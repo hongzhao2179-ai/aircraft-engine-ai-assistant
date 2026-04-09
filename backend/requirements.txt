@@ -3,3 +3,4 @@ uvicorn
 dashscope
 python-dotenv
 pydantic
+neo4j

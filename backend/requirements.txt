@@ -1,6 +1,23 @@
 fastapi
-uvicorn
-dashscope
-python-dotenv
+uvicorn[standard]
+httpx
+pydantic-settings
 pydantic
+
+# Supabase
+supabase
+PyJWT
+
+# Neo4j
 neo4j
+
+# LLM (按需选择)
+openai
+dashscope
+
+# 文件解析
+PyMuPDF
+python-docx
+
+# 兼容
+python-dotenv

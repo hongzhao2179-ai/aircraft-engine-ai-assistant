@@ -1,51 +1,44 @@
-import json
-from http import HTTPStatus
-import dashscope
+"""
+LLM 调用服务 — 支持 OpenAI 兼容接口 (包括通义千问)。
+"""
+
+from openai import AsyncOpenAI, OpenAI  # type: ignore
 from config.settings import settings
 
-class LLMService:
-    def __init__(self):
-        dashscope.api_key = settings.DASHSCOPE_API_KEY
+_sync_client = OpenAI(
+    api_key=settings.LLM_API_KEY,
+    base_url=settings.LLM_BASE_URL,
+    timeout=settings.LLM_TIMEOUT,
+)
 
-    def get_streaming_response(self, messages):
-        """调用通义千问流式接口"""
-        print(f"Calling DashScope with messages: {json.dumps(messages, ensure_ascii=False)}")
-        try:
-            responses = dashscope.Generation.call(
-                model=settings.MODEL_NAME,
-                messages=messages,
-                result_format='message',
-                stream=True,
-                incremental_output=True
-            )
-            
-            for response in responses:
-                if response.status_code == HTTPStatus.OK:
-                    content = response.output.choices[0]['message']['content']
-                    if content:
-                        yield content
-                else:
-                    error_msg = f"DashScope Error: {response.code} - {response.message}"
-                    print(error_msg)
-                    yield f"\n[Error] {error_msg}"
-        except Exception as e:
-            error_msg = f"Unexpected Error: {str(e)}"
-            print(error_msg)
-            yield f"\n[Error] {error_msg}"
+_async_client = AsyncOpenAI(
+    api_key=settings.LLM_API_KEY,
+    base_url=settings.LLM_BASE_URL,
+    timeout=settings.LLM_TIMEOUT,
+)
 
-    def get_non_streaming_response(self, messages):
-        """调用通义千问非流式接口"""
-        try:
-            response = dashscope.Generation.call(
-                model=settings.MODEL_NAME,
-                messages=messages,
-                result_format='message',
-            )
-            if response.status_code == HTTPStatus.OK:
-                return response.output.choices[0]['message']
-            else:
-                return {"role": "assistant", "content": f"[Error] {response.code} - {response.message}"}
-        except Exception as e:
-            return {"role": "assistant", "content": f"[Error] {str(e)}"}
 
-llm_service = LLMService()
+def call_llm(prompt: str, model: str | None = None) -> str:
+    """同步调用 LLM，返回完整字符串"""
+    m = model or settings.LLM_MODEL
+    resp = _sync_client.chat.completions.create(
+        model=m,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=settings.LLM_TEMPERATURE,
+    )
+    return resp.choices[0].message.content or ""
+
+
+async def call_llm_stream(prompt: str, model: str | None = None):
+    """流式调用 LLM，异步生成每个 token chunk"""
+    m = model or settings.LLM_MODEL
+    resp = await _async_client.chat.completions.create(
+        model=m,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=settings.LLM_TEMPERATURE,
+        stream=True,
+    )
+    async for chunk in resp:
+        delta = chunk.choices[0].delta.content
+        if delta:
+            yield delta

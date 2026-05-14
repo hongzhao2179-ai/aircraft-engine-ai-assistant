@@ -9,7 +9,8 @@ class Settings(BaseSettings):
 
     # LLM 配置
     LLM_PROVIDER: str = "openai"       # "openai" | "qwen" | "custom"
-    LLM_MODEL: str = "gpt-4o-mini"
+    LLM_MODEL: str = ""
+    DASHSCOPE_API_KEY: str = ""
     LLM_API_KEY: str = ""
     LLM_BASE_URL: str | None = None
     LLM_TEMPERATURE: float = 0.3

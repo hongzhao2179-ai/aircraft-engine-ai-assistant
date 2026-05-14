@@ -39,7 +39,9 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 if __name__ == "__main__":
     import uvicorn
-
+    print("[OK] SUPABASE_JWT_SECRET:", settings.SUPABASE_JWT_SECRET[:5] + "***")
+    print("[OK] NEO4J_URI:", settings.NEO4J_URI)
+    print("[OK] LLM_BASE_URL:", settings.LLM_BASE_URL)
     uvicorn.run(
         "main:app",
         host=settings.HOST,

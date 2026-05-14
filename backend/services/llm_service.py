@@ -18,23 +18,31 @@ _async_client = AsyncOpenAI(
 )
 
 
-def call_llm(prompt: str, model: str | None = None) -> str:
+def call_llm(prompt: str, model: str | None = None, system: str = "") -> str:
     """同步调用 LLM，返回完整字符串"""
     m = model or settings.LLM_MODEL
+    messages = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
     resp = _sync_client.chat.completions.create(
         model=m,
-        messages=[{"role": "user", "content": prompt}],
+        messages=messages,
         temperature=settings.LLM_TEMPERATURE,
     )
     return resp.choices[0].message.content or ""
 
 
-async def call_llm_stream(prompt: str, model: str | None = None):
+async def call_llm_stream(prompt: str, model: str | None = None, system: str = ""):
     """流式调用 LLM，异步生成每个 token chunk"""
     m = model or settings.LLM_MODEL
+    messages = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
     resp = await _async_client.chat.completions.create(
         model=m,
-        messages=[{"role": "user", "content": prompt}],
+        messages=messages,
         temperature=settings.LLM_TEMPERATURE,
         stream=True,
     )

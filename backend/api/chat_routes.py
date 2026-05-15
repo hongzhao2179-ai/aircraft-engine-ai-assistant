@@ -1,42 +1,37 @@
 import json
 from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
+from pydantic import BaseModel
 
-from services.llm_service import call_llm, call_llm_stream
-from prompts.system_prompt import get_system_prompt
-from prompts.user_prompt import get_formatted_prompt
-from config.settings import settings
+from services.rag_service import rag_answer, rag_answer_stream
 
 router = APIRouter(prefix="/api/chat", tags=["chat"])
 
 
+class ChatRequest(BaseModel):
+    message: str
+    history: list = []
+    stream: bool = False
+
+
 @router.post("/")
-async def chat(question: str, request: Request):
-    """普通用户对话接口 — 完整回复"""
-    system = get_system_prompt()
-    user = get_formatted_prompt(question)
+async def chat(body: ChatRequest, request: Request):
+    """统一对话接口 — 支持流式 / 非流式 + 多轮历史"""
     try:
-        response = call_llm(user, model=settings.LLM_MODEL, system=system)
+        if body.stream:
+            return StreamingResponse(
+                _event_stream(body.message, body.history),
+                media_type="text/event-stream",
+            )
+        response = await rag_answer(body.message, body.history)
         return {"response": response}
     except Exception as e:
         return {"error": str(e)}
 
 
-@router.post("/stream")
-async def chat_stream(question: str, request: Request):
-    """流式对话接口"""
-    system = get_system_prompt()
-    user = get_formatted_prompt(question)
-
-    async def event_stream():
-        full_response = ""
-        async for chunk in call_llm_stream(user, model=settings.LLM_MODEL, system=system):
-            full_response += chunk
-            yield json.dumps({"delta": chunk}, ensure_ascii=False)
-
-        yield json.dumps({"done": True, "full": full_response}, ensure_ascii=False)
-
-    return StreamingResponse(
-        event_stream(),
-        media_type="text/event-stream",
-    )
+async def _event_stream(message: str, history: list):
+    full_response = ""
+    async for chunk in rag_answer_stream(message, history):
+        full_response += chunk
+        yield f"data: {json.dumps({'delta': chunk}, ensure_ascii=False)}\n\n"
+    yield f"data: {json.dumps({'done': True, 'full': full_response}, ensure_ascii=False)}\n\n"

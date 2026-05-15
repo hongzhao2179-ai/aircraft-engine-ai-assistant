@@ -1,10 +1,12 @@
 import type { Message } from '../types';
 
+const CHAT_URL = `${import.meta.env.VITE_API_BASE_URL}/chat/`;
+
 export const postChatStream = async (
   message: string,
   history: Message[],
 ) => {
-  const resp = await fetch(`${import.meta.env.VITE_API_BASE_URL}/chat`, {
+  const resp = await fetch(CHAT_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -28,7 +30,7 @@ export const postChatOnce = async (
   message: string,
   history: Message[],
 ) => {
-  const resp = await fetch(`${import.meta.env.VITE_API_BASE_URL}/chat`, {
+  const resp = await fetch(CHAT_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

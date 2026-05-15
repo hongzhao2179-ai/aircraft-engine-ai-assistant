@@ -38,6 +38,12 @@ const ChatPage: React.FC = () => {
     }
   };
 
+  const handleLogout = async () => {
+    clearMessages();
+    localStorage.removeItem('aeromaint_chat_history');
+    await signOut();
+  };
+
   const handleQuickAction = (action: string) => {
     if (isLoading) return;
     let text = '';
@@ -63,11 +69,11 @@ const ChatPage: React.FC = () => {
         onNewChat={createNewChat}
       />
       
-      <Sidebar 
-        isOpen={sidebarOpen} 
-        onClose={() => setSidebarOpen(false)} 
+      <Sidebar
+        isOpen={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
         user={user}
-        onLogout={signOut}
+        onLogout={handleLogout}
         onClearChat={handleClear}
         sessions={sessions}
         currentSessionId={currentSessionId}

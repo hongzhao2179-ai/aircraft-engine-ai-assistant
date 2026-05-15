@@ -56,7 +56,17 @@
       "Bash(rm -rf D:/Trae-project/AI-Assistant/backend/api/__pycache__)",
       "Bash(rm -rf D:/Trae-project/AI-Assistant/backend/config/__pycache__)",
       "Bash(rm -rf D:/Trae-project/AI-Assistant/backend/services/__pycache__)",
-      "Bash(rm -rf D:/Trae-project/AI-Assistant/backend/utils/__pycache__)"
+      "Bash(rm -rf D:/Trae-project/AI-Assistant/backend/utils/__pycache__)",
+      "Bash(conda run *)",
+      "Bash(conda env *)",
+      "Bash(taskkill //F //PID 2712)",
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(bin/neo4j.bat start *)",
+      "Bash(bin/neo4j.bat status *)",
+      "Bash(bin/neo4j.bat console *)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)"
     ]
   }
 }

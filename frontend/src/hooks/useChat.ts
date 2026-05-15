@@ -27,25 +27,50 @@ export const useChat = () => {
       // The 'messages' variable here is from the latest render, so it's up-to-date.
       const reader = await postChatStream(content, messages);
       const decoder = new TextDecoder();
+      let buffer = '';
       let accumulatedContent = '';
 
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
 
-        const chunk = decoder.decode(value, { stream: true });
-        accumulatedContent += chunk;
+        buffer += decoder.decode(value, { stream: true });
 
-        // Use functional updates for streaming to prevent race conditions
-        setMessages(prev => {
-          const next = [...prev];
-          const lastMsg = next[next.length - 1];
-          if (lastMsg && lastMsg.role === 'assistant') {
-            next[next.length - 1] = { ...lastMsg, content: accumulatedContent };
-            return next;
+        // Parse SSE: split by double newline
+        const lines = buffer.split('\n');
+        // Keep last incomplete chunk in buffer
+        buffer = lines.pop() || '';
+
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue;
+          try {
+            const data = JSON.parse(line.slice(6));
+            if (data.done) {
+              // Final event — set full content
+              setMessages(prev => {
+                const next = [...prev];
+                const lastMsg = next[next.length - 1];
+                if (lastMsg?.role === 'assistant') {
+                  next[next.length - 1] = { ...lastMsg, content: data.full };
+                }
+                return next;
+              });
+              accumulatedContent = data.full;
+            } else if (data.delta) {
+              accumulatedContent += data.delta;
+              setMessages(prev => {
+                const next = [...prev];
+                const lastMsg = next[next.length - 1];
+                if (lastMsg?.role === 'assistant') {
+                  next[next.length - 1] = { ...lastMsg, content: accumulatedContent };
+                }
+                return next;
+              });
+            }
+          } catch {
+            // Skip malformed JSON
           }
-          return prev;
-        });
+        }
       }
     } catch (err) {
       console.error('Chat Error:', err);

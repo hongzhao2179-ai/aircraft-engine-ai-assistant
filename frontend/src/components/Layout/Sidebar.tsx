@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Wrench, Droplets, Zap, PlaneTakeoff, Book, Settings, HelpCircle, LogOut, Trash2, MessageSquare
+  Wrench, Droplets, Zap, PlaneTakeoff, Book, Settings, HelpCircle, LogOut, Trash2, MessageSquare, Shield
 } from 'lucide-react';
 import type { User } from '@supabase/supabase-js';
 import type { ChatSession } from '../../types';
@@ -89,6 +89,9 @@ const Sidebar: React.FC<SidebarProps> = ({
           </div>
         </div>
         <div className="p-4 border-t border-gray-200 space-y-1">
+          <a href="/admin" className="flex items-center space-x-3 px-3 py-2 text-sm rounded-md hover:bg-gray-200">
+            <Shield size={16} /> <span>管理后台</span>
+          </a>
           <a href="#" className="flex items-center space-x-3 px-3 py-2 text-sm rounded-md hover:bg-gray-200">
             <Settings size={16} /> <span>设置</span>
           </a>
